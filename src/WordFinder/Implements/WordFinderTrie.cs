@@ -4,7 +4,7 @@ using WordFinder.Interfaces;
 namespace WordFinder.Implements;
 public class WordFinderTrie : IWordFinder
 {
-    private TrieNode root;
+    private Trie root;
 
     public WordFinderTrie(IEnumerable<string> matrix)
     {
@@ -14,7 +14,7 @@ public class WordFinderTrie : IWordFinder
         if (matrix.Count() > 64 || matrix.First().Length > 64)
             throw new ArgumentException("Matrix dimensions cannot exceed 64x64.");
         
-        root = new TrieNode();
+        root = new Trie();
         InitializeMatrix(matrix);
     }
 
@@ -22,7 +22,7 @@ public class WordFinderTrie : IWordFinder
     {
         foreach (var row in matrix)
         {
-            root.AddWord(row);
+            root.Insert(row);
         }
 
         int colCount = matrix.First().Length;
@@ -34,7 +34,7 @@ public class WordFinderTrie : IWordFinder
             {
                 columnWord[rowIndex++] = row[col];
             }
-            root.AddWord(new string(columnWord));
+            root.Insert(new string(columnWord));
         }
     }
 
@@ -47,7 +47,7 @@ public class WordFinderTrie : IWordFinder
 
         foreach (var word in wordstream)
         {
-            if (root.SearchWord(word))
+            if (root.Search(word))
             {
                 if (!wordCount.ContainsKey(word))
                 {
