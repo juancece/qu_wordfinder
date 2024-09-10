@@ -1,0 +1,301 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="D:\Code\qu_wordfinder\src\WordFinder.Benchmark\bin\Release\net8.0\d81c1ab7-bd5d-47e4-97aa-2a0bbaed0b23\obj\Release\net8.0/" /p:OutDir="D:\Code\qu_wordfinder\src\WordFinder.Benchmark\bin\Release\net8.0\d81c1ab7-bd5d-47e4-97aa-2a0bbaed0b23\bin\Release\net8.0/" /p:OutputPath="D:\Code\qu_wordfinder\src\WordFinder.Benchmark\bin\Release\net8.0\d81c1ab7-bd5d-47e4-97aa-2a0bbaed0b23\bin\Release\net8.0/" in D:\Code\qu_wordfinder\src\WordFinder.Benchmark\bin\Release\net8.0\d81c1ab7-bd5d-47e4-97aa-2a0bbaed0b23
+// command took 0.83 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="D:\Code\qu_wordfinder\src\WordFinder.Benchmark\bin\Release\net8.0\d81c1ab7-bd5d-47e4-97aa-2a0bbaed0b23\obj\Release\net8.0/" /p:OutDir="D:\Code\qu_wordfinder\src\WordFinder.Benchmark\bin\Release\net8.0\d81c1ab7-bd5d-47e4-97aa-2a0bbaed0b23\bin\Release\net8.0/" /p:OutputPath="D:\Code\qu_wordfinder\src\WordFinder.Benchmark\bin\Release\net8.0\d81c1ab7-bd5d-47e4-97aa-2a0bbaed0b23\bin\Release\net8.0/" --output "D:\Code\qu_wordfinder\src\WordFinder.Benchmark\bin\Release\net8.0\d81c1ab7-bd5d-47e4-97aa-2a0bbaed0b23\bin\Release\net8.0/" in D:\Code\qu_wordfinder\src\WordFinder.Benchmark\bin\Release\net8.0\d81c1ab7-bd5d-47e4-97aa-2a0bbaed0b23
+// command took 4.1 sec and exited with 0
+// ***** Done, took 00:00:04 (4.96 sec)   *****
+// Found 2 benchmarks:
+//   WordFinderBenchmark.BenchmarkWordFinderHashSet: DefaultJob
+//   WordFinderBenchmark.BenchmarkWordFinderTrie: DefaultJob
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: WordFinderBenchmark.BenchmarkWordFinderHashSet: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet d81c1ab7-bd5d-47e4-97aa-2a0bbaed0b23.dll --anonymousPipes 1520 1600 --benchmarkName WordFinder.Benchmark.WordFinderBenchmark.BenchmarkWordFinderHashSet --job Default --benchmarkId 0 in D:\Code\qu_wordfinder\src\WordFinder.Benchmark\bin\Release\net8.0\d81c1ab7-bd5d-47e4-97aa-2a0bbaed0b23\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 119200.00 ns, 119.2000 us/op
+WorkloadJitting  1: 1 op, 2833400.00 ns, 2.8334 ms/op
+
+OverheadJitting  2: 16 op, 126100.00 ns, 7.8813 us/op
+WorkloadJitting  2: 16 op, 2073800.00 ns, 129.6125 us/op
+
+WorkloadPilot    1: 16 op, 617400.00 ns, 38.5875 us/op
+WorkloadPilot    2: 32 op, 1140600.00 ns, 35.6438 us/op
+WorkloadPilot    3: 64 op, 2310800.00 ns, 36.1063 us/op
+WorkloadPilot    4: 128 op, 4925000.00 ns, 38.4766 us/op
+WorkloadPilot    5: 256 op, 9627200.00 ns, 37.6063 us/op
+WorkloadPilot    6: 512 op, 18212600.00 ns, 35.5715 us/op
+WorkloadPilot    7: 1024 op, 35807100.00 ns, 34.9679 us/op
+WorkloadPilot    8: 2048 op, 76414100.00 ns, 37.3116 us/op
+WorkloadPilot    9: 4096 op, 148488000.00 ns, 36.2520 us/op
+WorkloadPilot   10: 8192 op, 206148800.00 ns, 25.1646 us/op
+WorkloadPilot   11: 16384 op, 110023900.00 ns, 6.7153 us/op
+WorkloadPilot   12: 32768 op, 219853400.00 ns, 6.7094 us/op
+WorkloadPilot   13: 65536 op, 438551500.00 ns, 6.6918 us/op
+WorkloadPilot   14: 131072 op, 876546000.00 ns, 6.6875 us/op
+
+OverheadWarmup   1: 131072 op, 256500.00 ns, 1.9569 ns/op
+OverheadWarmup   2: 131072 op, 240800.00 ns, 1.8372 ns/op
+OverheadWarmup   3: 131072 op, 231200.00 ns, 1.7639 ns/op
+OverheadWarmup   4: 131072 op, 247400.00 ns, 1.8875 ns/op
+OverheadWarmup   5: 131072 op, 241000.00 ns, 1.8387 ns/op
+OverheadWarmup   6: 131072 op, 240900.00 ns, 1.8379 ns/op
+OverheadWarmup   7: 131072 op, 274000.00 ns, 2.0905 ns/op
+OverheadWarmup   8: 131072 op, 240700.00 ns, 1.8364 ns/op
+
+OverheadActual   1: 131072 op, 250900.00 ns, 1.9142 ns/op
+OverheadActual   2: 131072 op, 251000.00 ns, 1.9150 ns/op
+OverheadActual   3: 131072 op, 227500.00 ns, 1.7357 ns/op
+OverheadActual   4: 131072 op, 240900.00 ns, 1.8379 ns/op
+OverheadActual   5: 131072 op, 240900.00 ns, 1.8379 ns/op
+OverheadActual   6: 131072 op, 256200.00 ns, 1.9547 ns/op
+OverheadActual   7: 131072 op, 240900.00 ns, 1.8379 ns/op
+OverheadActual   8: 131072 op, 232200.00 ns, 1.7715 ns/op
+OverheadActual   9: 131072 op, 233600.00 ns, 1.7822 ns/op
+OverheadActual  10: 131072 op, 258100.00 ns, 1.9691 ns/op
+OverheadActual  11: 131072 op, 264200.00 ns, 2.0157 ns/op
+OverheadActual  12: 131072 op, 227500.00 ns, 1.7357 ns/op
+OverheadActual  13: 131072 op, 230800.00 ns, 1.7609 ns/op
+OverheadActual  14: 131072 op, 236200.00 ns, 1.8021 ns/op
+OverheadActual  15: 131072 op, 231600.00 ns, 1.7670 ns/op
+OverheadActual  16: 131072 op, 227800.00 ns, 1.7380 ns/op
+OverheadActual  17: 131072 op, 227800.00 ns, 1.7380 ns/op
+
+WorkloadWarmup   1: 131072 op, 869243300.00 ns, 6.6318 us/op
+WorkloadWarmup   2: 131072 op, 872071900.00 ns, 6.6534 us/op
+WorkloadWarmup   3: 131072 op, 857790900.00 ns, 6.5444 us/op
+WorkloadWarmup   4: 131072 op, 868347300.00 ns, 6.6250 us/op
+WorkloadWarmup   5: 131072 op, 852980900.00 ns, 6.5077 us/op
+WorkloadWarmup   6: 131072 op, 868337400.00 ns, 6.6249 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 131072 op, 857781300.00 ns, 6.5444 us/op
+WorkloadActual   2: 131072 op, 860031900.00 ns, 6.5615 us/op
+WorkloadActual   3: 131072 op, 856671000.00 ns, 6.5359 us/op
+WorkloadActual   4: 131072 op, 854678100.00 ns, 6.5207 us/op
+WorkloadActual   5: 131072 op, 860999000.00 ns, 6.5689 us/op
+WorkloadActual   6: 131072 op, 854296500.00 ns, 6.5178 us/op
+WorkloadActual   7: 131072 op, 851349500.00 ns, 6.4953 us/op
+WorkloadActual   8: 131072 op, 854811300.00 ns, 6.5217 us/op
+WorkloadActual   9: 131072 op, 855635300.00 ns, 6.5280 us/op
+WorkloadActual  10: 131072 op, 857528500.00 ns, 6.5424 us/op
+WorkloadActual  11: 131072 op, 854177100.00 ns, 6.5169 us/op
+WorkloadActual  12: 131072 op, 873490200.00 ns, 6.6642 us/op
+WorkloadActual  13: 131072 op, 857239400.00 ns, 6.5402 us/op
+WorkloadActual  14: 131072 op, 863248800.00 ns, 6.5861 us/op
+WorkloadActual  15: 131072 op, 843751300.00 ns, 6.4373 us/op
+
+// AfterActualRun
+WorkloadResult   1: 131072 op, 857545100.00 ns, 6.5425 us/op
+WorkloadResult   2: 131072 op, 859795700.00 ns, 6.5597 us/op
+WorkloadResult   3: 131072 op, 856434800.00 ns, 6.5341 us/op
+WorkloadResult   4: 131072 op, 854441900.00 ns, 6.5189 us/op
+WorkloadResult   5: 131072 op, 860762800.00 ns, 6.5671 us/op
+WorkloadResult   6: 131072 op, 854060300.00 ns, 6.5160 us/op
+WorkloadResult   7: 131072 op, 851113300.00 ns, 6.4935 us/op
+WorkloadResult   8: 131072 op, 854575100.00 ns, 6.5199 us/op
+WorkloadResult   9: 131072 op, 855399100.00 ns, 6.5262 us/op
+WorkloadResult  10: 131072 op, 857292300.00 ns, 6.5406 us/op
+WorkloadResult  11: 131072 op, 853940900.00 ns, 6.5151 us/op
+WorkloadResult  12: 131072 op, 857003200.00 ns, 6.5384 us/op
+WorkloadResult  13: 131072 op, 863012600.00 ns, 6.5843 us/op
+WorkloadResult  14: 131072 op, 843515100.00 ns, 6.4355 us/op
+
+// AfterAll
+// Benchmark Process 43872 has exited with code 0.
+
+Mean = 6.528 μs, StdErr = 0.010 μs (0.15%), N = 14, StdDev = 0.036 μs
+Min = 6.436 μs, Q1 = 6.517 μs, Median = 6.530 μs, Q3 = 6.542 μs, Max = 6.584 μs
+IQR = 0.025 μs, LowerFence = 6.479 μs, UpperFence = 6.580 μs
+ConfidenceInterval = [6.488 μs; 6.568 μs] (CI 99.9%), Margin = 0.040 μs (0.61% of Mean)
+Skewness = -0.89, Kurtosis = 3.94, MValue = 2
+
+// ** Remained 1 (50.0%) benchmark(s) to run. Estimated finish 2024-09-09 20:25 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: WordFinderBenchmark.BenchmarkWordFinderTrie: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet d81c1ab7-bd5d-47e4-97aa-2a0bbaed0b23.dll --anonymousPipes 1528 824 --benchmarkName WordFinder.Benchmark.WordFinderBenchmark.BenchmarkWordFinderTrie --job Default --benchmarkId 1 in D:\Code\qu_wordfinder\src\WordFinder.Benchmark\bin\Release\net8.0\d81c1ab7-bd5d-47e4-97aa-2a0bbaed0b23\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 112000.00 ns, 112.0000 us/op
+WorkloadJitting  1: 1 op, 2832400.00 ns, 2.8324 ms/op
+
+OverheadJitting  2: 16 op, 140900.00 ns, 8.8063 us/op
+WorkloadJitting  2: 16 op, 3409400.00 ns, 213.0875 us/op
+
+WorkloadPilot    1: 16 op, 1501800.00 ns, 93.8625 us/op
+WorkloadPilot    2: 32 op, 3063000.00 ns, 95.7188 us/op
+WorkloadPilot    3: 64 op, 5912700.00 ns, 92.3859 us/op
+WorkloadPilot    4: 128 op, 11573400.00 ns, 90.4172 us/op
+WorkloadPilot    5: 256 op, 23967600.00 ns, 93.6234 us/op
+WorkloadPilot    6: 512 op, 44837600.00 ns, 87.5734 us/op
+WorkloadPilot    7: 1024 op, 116674300.00 ns, 113.9397 us/op
+WorkloadPilot    8: 2048 op, 131400100.00 ns, 64.1602 us/op
+WorkloadPilot    9: 4096 op, 234770500.00 ns, 57.3170 us/op
+WorkloadPilot   10: 8192 op, 233087500.00 ns, 28.4531 us/op
+WorkloadPilot   11: 16384 op, 355703100.00 ns, 21.7104 us/op
+WorkloadPilot   12: 32768 op, 715404300.00 ns, 21.8324 us/op
+
+OverheadWarmup   1: 32768 op, 75500.00 ns, 2.3041 ns/op
+OverheadWarmup   2: 32768 op, 61900.00 ns, 1.8890 ns/op
+OverheadWarmup   3: 32768 op, 61000.00 ns, 1.8616 ns/op
+OverheadWarmup   4: 32768 op, 60500.00 ns, 1.8463 ns/op
+OverheadWarmup   5: 32768 op, 62200.00 ns, 1.8982 ns/op
+OverheadWarmup   6: 32768 op, 64400.00 ns, 1.9653 ns/op
+OverheadWarmup   7: 32768 op, 67700.00 ns, 2.0660 ns/op
+OverheadWarmup   8: 32768 op, 64600.00 ns, 1.9714 ns/op
+OverheadWarmup   9: 32768 op, 61000.00 ns, 1.8616 ns/op
+OverheadWarmup  10: 32768 op, 58600.00 ns, 1.7883 ns/op
+
+OverheadActual   1: 32768 op, 61700.00 ns, 1.8829 ns/op
+OverheadActual   2: 32768 op, 63600.00 ns, 1.9409 ns/op
+OverheadActual   3: 32768 op, 61900.00 ns, 1.8890 ns/op
+OverheadActual   4: 32768 op, 60800.00 ns, 1.8555 ns/op
+OverheadActual   5: 32768 op, 59100.00 ns, 1.8036 ns/op
+OverheadActual   6: 32768 op, 61600.00 ns, 1.8799 ns/op
+OverheadActual   7: 32768 op, 57500.00 ns, 1.7548 ns/op
+OverheadActual   8: 32768 op, 64100.00 ns, 1.9562 ns/op
+OverheadActual   9: 32768 op, 65600.00 ns, 2.0020 ns/op
+OverheadActual  10: 32768 op, 64600.00 ns, 1.9714 ns/op
+OverheadActual  11: 32768 op, 58800.00 ns, 1.7944 ns/op
+OverheadActual  12: 32768 op, 57100.00 ns, 1.7426 ns/op
+OverheadActual  13: 32768 op, 60800.00 ns, 1.8555 ns/op
+OverheadActual  14: 32768 op, 57300.00 ns, 1.7487 ns/op
+OverheadActual  15: 32768 op, 61200.00 ns, 1.8677 ns/op
+
+WorkloadWarmup   1: 32768 op, 707120100.00 ns, 21.5796 us/op
+WorkloadWarmup   2: 32768 op, 714083400.00 ns, 21.7921 us/op
+WorkloadWarmup   3: 32768 op, 721337700.00 ns, 22.0135 us/op
+WorkloadWarmup   4: 32768 op, 711851100.00 ns, 21.7240 us/op
+WorkloadWarmup   5: 32768 op, 699103100.00 ns, 21.3349 us/op
+WorkloadWarmup   6: 32768 op, 689407200.00 ns, 21.0390 us/op
+WorkloadWarmup   7: 32768 op, 700165800.00 ns, 21.3674 us/op
+WorkloadWarmup   8: 32768 op, 694018600.00 ns, 21.1798 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 32768 op, 712973300.00 ns, 21.7582 us/op
+WorkloadActual   2: 32768 op, 693454100.00 ns, 21.1625 us/op
+WorkloadActual   3: 32768 op, 706218500.00 ns, 21.5521 us/op
+WorkloadActual   4: 32768 op, 706328800.00 ns, 21.5554 us/op
+WorkloadActual   5: 32768 op, 691897000.00 ns, 21.1150 us/op
+WorkloadActual   6: 32768 op, 693954000.00 ns, 21.1778 us/op
+WorkloadActual   7: 32768 op, 703890900.00 ns, 21.4810 us/op
+WorkloadActual   8: 32768 op, 703603800.00 ns, 21.4723 us/op
+WorkloadActual   9: 32768 op, 699939000.00 ns, 21.3604 us/op
+WorkloadActual  10: 32768 op, 718959100.00 ns, 21.9409 us/op
+WorkloadActual  11: 32768 op, 705341900.00 ns, 21.5253 us/op
+WorkloadActual  12: 32768 op, 702181600.00 ns, 21.4289 us/op
+WorkloadActual  13: 32768 op, 712741500.00 ns, 21.7511 us/op
+WorkloadActual  14: 32768 op, 697521400.00 ns, 21.2867 us/op
+WorkloadActual  15: 32768 op, 711475500.00 ns, 21.7125 us/op
+
+// AfterActualRun
+WorkloadResult   1: 32768 op, 712912100.00 ns, 21.7564 us/op
+WorkloadResult   2: 32768 op, 693392900.00 ns, 21.1607 us/op
+WorkloadResult   3: 32768 op, 706157300.00 ns, 21.5502 us/op
+WorkloadResult   4: 32768 op, 706267600.00 ns, 21.5536 us/op
+WorkloadResult   5: 32768 op, 691835800.00 ns, 21.1132 us/op
+WorkloadResult   6: 32768 op, 693892800.00 ns, 21.1759 us/op
+WorkloadResult   7: 32768 op, 703829700.00 ns, 21.4792 us/op
+WorkloadResult   8: 32768 op, 703542600.00 ns, 21.4704 us/op
+WorkloadResult   9: 32768 op, 699877800.00 ns, 21.3586 us/op
+WorkloadResult  10: 32768 op, 718897900.00 ns, 21.9390 us/op
+WorkloadResult  11: 32768 op, 705280700.00 ns, 21.5235 us/op
+WorkloadResult  12: 32768 op, 702120400.00 ns, 21.4270 us/op
+WorkloadResult  13: 32768 op, 712680300.00 ns, 21.7493 us/op
+WorkloadResult  14: 32768 op, 697460200.00 ns, 21.2848 us/op
+WorkloadResult  15: 32768 op, 711414300.00 ns, 21.7106 us/op
+
+// AfterAll
+// Benchmark Process 44008 has exited with code 0.
+
+Mean = 21.483 μs, StdErr = 0.062 μs (0.29%), N = 15, StdDev = 0.240 μs
+Min = 21.113 μs, Q1 = 21.322 μs, Median = 21.479 μs, Q3 = 21.632 μs, Max = 21.939 μs
+IQR = 0.310 μs, LowerFence = 20.856 μs, UpperFence = 22.098 μs
+ConfidenceInterval = [21.226 μs; 21.741 μs] (CI 99.9%), Margin = 0.257 μs (1.20% of Mean)
+Skewness = 0.11, Kurtosis = 1.93, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2024-09-09 20:25 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\WordFinder.Benchmark.WordFinderBenchmark-report.csv
+  BenchmarkDotNet.Artifacts\results\WordFinder.Benchmark.WordFinderBenchmark-report-github.md
+  BenchmarkDotNet.Artifacts\results\WordFinder.Benchmark.WordFinderBenchmark-report.html
+
+// * Detailed results *
+WordFinderBenchmark.BenchmarkWordFinderHashSet: DefaultJob
+Runtime = .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 6.528 μs, StdErr = 0.010 μs (0.15%), N = 14, StdDev = 0.036 μs
+Min = 6.436 μs, Q1 = 6.517 μs, Median = 6.530 μs, Q3 = 6.542 μs, Max = 6.584 μs
+IQR = 0.025 μs, LowerFence = 6.479 μs, UpperFence = 6.580 μs
+ConfidenceInterval = [6.488 μs; 6.568 μs] (CI 99.9%), Margin = 0.040 μs (0.61% of Mean)
+Skewness = -0.89, Kurtosis = 3.94, MValue = 2
+-------------------- Histogram --------------------
+[6.416 μs ; 6.594 μs) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+WordFinderBenchmark.BenchmarkWordFinderTrie: DefaultJob
+Runtime = .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 21.483 μs, StdErr = 0.062 μs (0.29%), N = 15, StdDev = 0.240 μs
+Min = 21.113 μs, Q1 = 21.322 μs, Median = 21.479 μs, Q3 = 21.632 μs, Max = 21.939 μs
+IQR = 0.310 μs, LowerFence = 20.856 μs, UpperFence = 22.098 μs
+ConfidenceInterval = [21.226 μs; 21.741 μs] (CI 99.9%), Margin = 0.257 μs (1.20% of Mean)
+Skewness = 0.11, Kurtosis = 1.93, MValue = 2
+-------------------- Histogram --------------------
+[20.985 μs ; 22.067 μs) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.22631.4112/23H2/2023Update/SunValley3)
+13th Gen Intel Core i9-13900H, 1 CPU, 20 logical and 14 physical cores
+.NET SDK 8.0.400
+  [Host]     : .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+  DefaultJob : .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+
+
+| Method                     | Mean      | Error     | StdDev    |
+|--------------------------- |----------:|----------:|----------:|
+| BenchmarkWordFinderHashSet |  6.528 μs | 0.0401 μs | 0.0355 μs |
+| BenchmarkWordFinderTrie    | 21.483 μs | 0.2571 μs | 0.2405 μs |
+
+// * Hints *
+Outliers
+  WordFinderBenchmark.BenchmarkWordFinderHashSet: Default -> 1 outlier  was  removed, 2 outliers were detected (6.44 μs, 6.66 μs)
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 μs   : 1 Microsecond (0.000001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:39 (39.09 sec), executed benchmarks: 2
+
+Global total time: 00:00:44 (44.34 sec), executed benchmarks: 2
+// * Artifacts cleanup *
+Artifacts cleanup is finished
